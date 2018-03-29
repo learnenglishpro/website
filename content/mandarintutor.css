@@ -1,0 +1,1587 @@
+/********************** set container for footer setup.   **********************/
+
+/* Padding-bottom must be the height of the footer */
+#container 
+{
+  min-height: 100%;
+  overflow:auto;
+  padding-bottom: 56px;
+}
+
+/* fix for Android auto-fit bug */
+h1, h2, p, li  
+{
+  background-image: url('../images/blank_pixel.png'); 
+}
+
+body
+{
+  font-family: Verdana,Geneva,sans-serif;
+  /*font-family: Helvetica, Arial, sans-serif;*/
+  color: rgb(80, 80, 80)
+}
+
+/********************** Header **********************/
+
+.defaultGreen
+{    
+    color: rgb(134, 188, 80);
+}
+
+.defaultDarkBlue
+{    
+    color: rgb(36, 44, 66);
+}
+
+.darkerGreen
+{    
+    color: rgb(109,158,60);
+}
+
+
+
+.backgroundDefaultGreen
+{    
+    background-color: rgb(134, 188, 80)
+}
+
+.noImgBorder
+{
+  border-width: 0;
+}
+
+.noAhrefUnderline
+{
+    text-decoration: none;
+}
+
+
+.flipHorizontalText
+{
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1); 
+}
+
+.topHeader
+{
+    height: 56px;
+    background-color: rgb(36, 44, 66); 
+    font-family: Helvetica, Arial, sans-serif;   
+    /*
+    border-width: 1px;    
+    border-style:solid;
+    border-color: rgb(65, 181, 49); 
+    */
+}
+
+.topHeaderTable
+{
+  padding-top: 15px;
+}
+
+.topHeaderTable td
+{
+   color: rgb(255,255,255);
+   font-size: 12px;
+}
+
+.menuHeader
+{
+    height: 70px;         
+    padding-bottom: 30px; 
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.ahrefCellClickable
+{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.headerTable
+{
+    padding-top: 20px;
+      
+}
+
+.headerTable td
+{
+    white-space: nowrap;    
+}
+
+.mandarinHeader
+{
+    vertical-align:top;
+    color: rgb(36, 44, 66);
+    font-size: 36px;
+    font-weight: 600;  
+    font-family: Geneva,Tahoma,Verdana,sans-serif;
+}
+
+.tutorHeader
+{
+    vertical-align:top;    
+    color: rgb(134, 188, 80);
+    font-size: 36px;
+    font-weight: 600; 
+    font-family: Geneva,Tahoma,Verdana,sans-serif;     
+}
+
+.headerAhref
+{   
+    color: rgb(84, 102, 154); 
+}
+
+
+.headerAhref:hover
+{
+    color: rgb(134, 188, 80);
+}
+
+.downArrow 
+{
+  font-size: 10px;
+  font-weight: lighter;
+  position: relative;  
+  top: 3px;
+  
+  /* Need to set display inline-block and width height in order for rotation to work */
+  display: inline-block;
+  width: 12px;
+  height: 10px;  
+  
+  transform: rotate(90deg);
+  /* Safari */
+  -webkit-transform: rotate(90deg);
+  /* Firefox */
+  -moz-transform: rotate(90deg);
+  /* IE */
+  -ms-transform: rotate(90deg);
+  /* Opera */
+  -o-transform: rotate(90deg);
+    
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);  
+  
+}
+
+
+/* Drop Down Menu Top */
+.dropDownMenu
+{
+	list-style:none;
+	float:left;
+	width:655px;	
+}
+
+.dropDownMenu li
+{
+	float:left;
+	margin-right:30px;
+	position:relative;
+  z-index: 100; 	
+}
+
+.dropDownMenu a
+{
+	display:block;
+	padding:5px;		
+  color: rgb(36, 44, 66);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration:none; 	
+}
+
+.dropDownMenu a:hover
+{
+    color: rgb(134, 188, 80);
+}
+
+/* Drop Down Menu Inner */
+.dropDownMenu ul
+{
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+
+.dropDownMenu ul li
+{
+	background:rgb(255,255,255);
+	border: 1px solid;
+	margin-bottom:-1px;
+  border-color: rgb(100,100,100); 
+	float:none;
+	padding: 6px 6px 6px 6px;
+}
+
+.dropDownMenu ul a
+{
+	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+
+.dropDownMenu li:hover ul
+{ 
+  /* Display the dropdown on hover */
+	left:-35px; /* Bring back on-screen when needed */
+}
+
+.dropDownMenu li:hover a
+{ 
+  /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	background:rgb(255,255,255);
+	/*text-decoration:underline;*/
+}
+
+.dropDownMenu li:hover ul a
+{ 
+  /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:none;
+}
+
+
+/* Drop Down Menu Mobile Top */
+.dropDownMenuMobile
+{
+	list-style:none;
+	float:left;
+	width:565px;
+}
+
+.dropDownMenuMobile li
+{
+	float:left;
+	margin-right:20px;
+	position:relative;
+	color: rgb(36, 44, 66);
+	left: -30px;
+  font-size: 14px;
+  z-index: 100;
+}
+
+.dropDownMenuMobile a
+{
+	display:block;
+	padding:5px;
+	color: rgb(36, 44, 66);	
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration:none;  	
+}
+
+.dropDownMenuMobile a:hover
+{
+    color: rgb(134, 188, 80);	
+}
+
+/* Drop Down Menu Mobile Inner */
+.dropDownMenuMobile ul
+{
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+
+.dropDownMenuMobile ul li
+{
+	background:rgb(255,255,255);
+	border: 1px solid;
+	margin-bottom:-1px;	
+  border-color: rgb(100,100,100); 
+	float:none;
+	padding: 6px 0px 6px 0px; 	
+}
+
+.dropDownMenuMobile ul a
+{
+	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+
+.dropDownMenuMobile li:hover ul
+{ 
+  /* Display the dropdown on hover */
+	left: -5px; /* Bring back on-screen when needed */
+}
+
+.dropDownMenuMobile li:hover a
+{ 
+  /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	background:rgb(255,255,255);
+	/* text-decoration:underline; */
+}
+
+.dropDownMenuMobile li:hover ul a
+{ 
+  /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:none;
+}
+
+
+.headerNav
+{
+  background-color: rgb(182, 215, 149);
+  border: 1px solid;    
+  border-color: rgb(65, 94, 36);    
+}
+
+.headerNav a
+{  
+  display: block;
+  text-decoration: none;
+  height: 100%;
+  padding-left:10px;
+  padding-right :10px;    
+}
+
+.headerNav a:hover
+{
+  background: rgb(222,237,207);
+}
+
+.highlightHeaderNav
+{
+  background: rgb(222,237,207);   
+}
+
+/********************** Main **********************/
+
+.textOverImageDiv { 
+   position: relative; 
+   width: 100%; /* for IE 6 */   
+   font-family: Helvetica, Arial, sans-serif;
+   border-top: 1px solid rgb(240,240,240);
+}
+
+.scalableDiv {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.textAndButtonDiv 
+{
+   position: relative;
+   margin-top: 5%;
+   float: right;
+   right: 15%;  
+}
+
+.headerOverImage 
+{ 
+   color: rgb(36, 44, 66);
+   font-weight: bold;
+}
+
+.headerOverImageFont 
+{
+   font-size: 35px; 
+   font-size: 2.7vw;  
+}
+
+
+.headerOverImageSub 
+{ 
+   font-weight: normal;
+   color: rgb(36, 44, 66);
+}
+
+.headerOverImageSubFont 
+{ 
+   font-size: 24px; 
+   font-size: 1.65vw;
+}
+
+.scaleImage
+{
+    display: block;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+    z-index: -99;
+}
+
+.benefitsTable
+{
+  padding-top: 75px; 
+  font-family: Helvetica, Arial, sans-serif; 
+}
+
+.benefitsTable td 
+{
+  padding-right: 20px;
+  padding-bottom: 57px;  
+}
+
+.advertFont
+{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding-left: 40px;
+  padding-right: 70px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.advertUL
+{
+    font-size: 25px;
+    color: rgb(51, 51, 51);
+}
+
+.advertUL li
+{
+ padding: 10px;   
+}
+
+.whiteSegoeFont
+{    
+    color: rgb(255, 255, 255);
+    font-size: 16px; 
+}
+
+.blueSegoeFont
+{    
+    color: rgb(0, 102, 204);
+    font-size: 16px; 
+}
+
+.whiteSmallAhrefFont
+{
+   color: rgb(255,255,255);
+   font-size: 13px;
+}
+
+.whiteSmallAhrefFont:hover
+{
+    color: rgb(134, 188, 80); 
+}
+
+.blueSmallAhrefFont
+{
+   color: rgb(36, 44, 66);
+   font-size: 13px;
+}
+
+.blueSmallAhrefFont:hover
+{
+    color: rgb(134, 188, 80); 
+}
+
+
+
+.whiteSmallFont
+{
+   color: rgb(255,255,255);
+   font-size: 13px;
+}
+
+
+.greenSmallFont
+{
+   color: rgb(134, 188, 80);
+   font-size: 13px;
+}
+
+.divHowItWorks
+{
+  padding-top: 40px;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100%; 
+  text-align:center;
+  padding-bottom: 55px;  
+}
+
+.divVideo
+{
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100%; 
+  text-align:center;    
+  padding-top: 45px;
+
+  
+  background-color: rgb(36, 44, 66);
+  height: 515px;
+  border-top: 2px solid rgb(30,36,54);
+  border-bottom: 2px solid rgb(30,36,54);
+}
+
+
+.divCourses
+{
+  padding-top: 67px;  
+  padding-bottom: 80px;
+}
+
+.coursesTable
+{
+}
+
+.coursesTable td 
+{
+  vertical-align: top;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.detailTitle
+{
+  font-size: 30px; 
+  color: rgb(51, 51, 51);
+}
+
+.detailText
+{
+  font-size: 20px;    
+}
+
+.imageCenter
+{
+ display:block; 
+ margin:auto; 
+}
+
+
+.imageBorder
+{
+  
+ padding:10px; 
+ border:solid; 
+ border-color: rgb(221,221,221) rgb(221,221,221) rgb(221,221,221) rgb(221,221,221); 
+ border-width: 1px 1px 1px 1px;  
+ box-shadow: 10px 10px 8px rgb(175,175,175);
+}
+
+
+.userImageBorder
+{
+ padding:5px; 
+ border:solid; 
+ border-color: #dddddd #aaaaaa #aaaaaa #dddddd; 
+ border-width: 1px 2px 2px 1px;  
+}
+
+.circularImageBorder
+{
+  
+ padding:10px; 
+ border:solid; 
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ border-color: rgb(221,221,221) rgb(221,221,221) rgb(221,221,221) rgb(221,221,221); 
+ border-width: 1px 1px 1px 1px;  
+ box-shadow: 7px 7px 5px rgb(175,175,175);
+}
+
+.dashedLineTop {
+  width: 120px;
+  height:60px;
+  z-index: -1;
+  background: transparent;
+  border: none;
+  border-top: dashed 2px rgb(200,200,200);
+  padding: 40px 40px;  
+  /*margin: 0 -65px;*/
+}
+
+
+.dashedLineBottom {
+  width: 120px;
+  height:60px;
+  z-index: -1;
+  background: transparent;
+  border: none;
+  border-bottom: dashed 2px rgb(200,200,200);
+  padding: 40px 40px;  
+  /*margin: 0 -65px;*/
+}
+
+.divQuotes
+{
+  font-size: 22px;  
+  padding-bottom: 80px;
+  text-align:center;
+  color: rgb(125,125,125);
+}
+
+.tableQuotes
+{
+  max-width: 1000px;
+}
+
+.noPaddingTable
+{
+  border-collapse: collapse;
+}
+
+.noPaddingTable td
+{
+  padding:0; 
+  margin:0;
+}
+
+.placeTextBox
+{
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.placeTextBox::placeholder
+{
+  color: rgb(210,210,210);
+}
+
+/* Internet Explorer 10-11 */
+.placeTextBox:-ms-input-placeholder
+{
+  color: rgb(210,210,210);
+}
+
+ /* Microsoft Edge */
+.placeTextBox::-ms-input-placeholder
+{
+  color: rgb(210,210,210);
+}
+
+/********************** How Does it Work **********************/
+.divMain
+{
+  width: 60%;  
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 21px; 
+}
+
+.title
+{
+  font-size: 33px;  
+  color: rgb(51, 51, 51);
+}
+
+.stepsOL
+{
+  color: rgb(0, 0, 0);
+}
+
+.stepsOL li
+{
+  padding: 10px;   
+}
+
+/********************** Prices **********************/
+
+.tutorDetailsColCount1 
+{
+  padding: 0px;
+  height: 45px; 
+  list-style-type: none;
+}
+
+.tutorDetailsColCount1 li {  
+  margin-bottom: 10px;
+}
+
+
+.tutorDetailsColCount2 
+{
+  padding: 0px;
+  margin: 0px;
+  height: 100%; 
+  width: 100%;  
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3; /*3 is the number of columns*/
+  list-style-type: none;
+}
+
+.tutorDetailsColCount2 li 
+{
+  display: inline-block; /* this prevents the text in this li from breaking out into the next column, it keeps the li text together */
+  margin-bottom: 10px;  
+}
+
+
+.priceTable
+{
+  border: 1px solid black;
+}
+
+.priceTable th
+{ 
+  border: 1px solid black;
+  background-color: rgb(182, 215, 149);
+  color: rgb(51, 51, 51);
+}
+
+.priceTable td
+{ 
+  border: 1px solid black;  
+}
+
+
+.userAbility
+{
+  font-size: 12px;
+  padding: 3px 5px 3px 5px;
+  background-color: rgb(235, 235, 235);
+  color: rgb(135, 135, 135);
+  cursor:pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;  
+}
+
+
+.overlayCentered
+{
+    display: none;    
+    z-index: 9998;
+    position: absolute;
+    width: 850px;
+    height: auto;
+    background-color: White;
+    border: 1px solid rgb(200,200,200);
+    padding: 5px;    
+    -moz-box-shadow:    3px 3px 2px rgba(150, 150, 150, 0.75);
+    -webkit-box-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
+    box-shadow:         3px 3px 2px rgba(150, 150, 150, 0.75);
+}
+
+.overlayCenteredClose
+{
+  z-index: 9999;  
+  position: absolute;
+  right: -24px;
+  top: -24px;
+}
+
+
+.dimBackground 
+{
+    display: none; 
+    z-index: 9997;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;    
+    background-color: #CCC;
+    filter: alpha(opacity = 55);
+    opacity:.55;
+}
+
+
+.overlayHelp
+{
+    /* set the width and height of the overlay div in the style attribute of the div*/
+    display: none;
+    z-index: 100;
+    position: absolute;
+    background-color: rgb(50,50,50);
+    color: rgb(255,255,255);
+    border: 1px solid rgb(200,200,200);
+    padding: 5px;    
+    -moz-box-shadow:    4px 4px 3px rgba(150, 150, 150, 0.75);
+    -webkit-box-shadow: 4px 4px 3px rgba(150, 150, 150, 0.75);
+    box-shadow:         4px 4px 3px rgba(150, 150, 150, 0.75);  
+    
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+      
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.overlayHelpClose
+{
+  z-index: 101;  
+  position: absolute;
+}
+
+
+/********************** Login controller **********************/ 
+.loginContainer
+{
+
+}
+
+
+.loginFieldSet
+{
+  padding-top: 30px;
+  padding-left: 80px;
+  padding-right: 80px;  
+  padding-bottom: 40px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;  
+}
+
+.loginFont
+{
+
+}
+
+.forgotPassword
+{
+ margin-top: 5px;
+ font-size: 12px; 
+}
+
+
+.regInstr
+{
+  font-size: 11px;
+  color: rgb(130,130,130);   
+}
+
+.editor-label
+{
+  margin: 1em 0 0 0;
+}
+
+.editor-field
+{
+  margin:0.5em 0 0 0;
+}
+
+.text-box
+{
+  width: 30em;
+}
+
+.loginCheckbox
+{
+  margin-bottom: 10px;  
+}
+
+
+/********************** Resources **********************/ 
+.basRadicalTable
+{
+  border: 1px solid black;
+  width: 80%;
+}
+
+.basRadicalTable th
+{ 
+  border: 1px solid black;
+  background-color: rgb(182, 215, 149); 
+  font-weight: normal; 
+}
+
+.basRadicalTable td
+{ 
+  border: 1px solid black;
+  text-align: center;  
+}
+
+
+.advRadicalTable
+{
+  border: 1px solid black;
+}
+
+.advRadicalTable th
+{ 
+  border: 1px solid black;
+  background-color: rgb(182, 215, 149); 
+}
+
+.advRadicalTable td
+{ 
+  border: 1px solid black;
+  text-align: center;
+  font-size: 20px;
+}
+/********************** validation helper styles: change this to change the validation font color and styles **********************/ 
+.field-validation-error
+{
+    color: rgb(255,0,0);
+    font-size: 12px;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid rgb(255,0,0);
+    background-color: rgb(255,238,238);
+}
+
+.validation-summary-errors
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255,0,0);    
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/********************** Admin Page **********************/
+
+.pageLogCellBg
+{
+  background-color: rgb(221, 240, 200);
+}
+
+.blankSection
+{
+  padding-top: 30px;
+}
+
+#pageNumbers
+{
+    color: Black;
+    font-size: 12px;
+    text-align: center;
+}
+
+.pageAref
+{
+  color: rgb(0, 102, 204);
+}
+
+/********************** Footer **********************/
+
+
+.footer
+{
+    position: relative; /* footer setup */
+	  margin-top: -56px; /* footer setup: negative value of footer height */
+	  clear:both; /* footer setup */
+
+    width: 100%; 
+    height: auto;
+    background-color: rgb(36, 44, 66);    
+    
+    color: rgb(255,255,255);
+    font-size: 12px;  
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.footerTable
+{
+}
+
+.footerTable th
+{
+    color: rgb(134, 188, 80);
+    font-size: 16px;
+    text-align: left; 
+}
+
+.footerTable td
+{
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: top;    
+    padding: 10px 40px 0px 0px; 
+}
+
+.footerMiniTable td
+{
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+/********************** Register **********************/
+
+.registerTextbox
+{
+  font-size: 18px;
+}
+
+
+.divWideNet
+{
+  display: none;
+  visibility:hidden;
+}
+
+
+/********************** Update Time Zone **********************/
+
+.selectTimeZone 
+{ 
+    font-size: 20px;
+}
+
+
+.divTimeZone
+{
+  width: 50%;
+}
+
+
+/********************** Scheduling **********************/ 
+.schedulingTable
+{
+  border: 1px solid black;
+  width: 100%;
+}
+
+.schedulingTable th
+{ 
+  border: 1px solid black;
+  background-color: rgb(182, 215, 149); 
+  font-weight: normal; 
+}
+
+.schedulingTable td
+{ 
+  border: 1px solid black;
+  text-align: center;  
+}
+
+.schedulingTableWeek
+{
+  border: 1px solid black;  
+  width: 100%;
+  border-spacing: 0;
+}
+
+.schedulingTableWeek th
+{ 
+  border: 1px solid black;
+  padding: 0px;
+  font-weight: normal; 
+}
+
+.schedulingTableWeek td
+{ 
+  border: 1px solid black;
+  padding: 0px;
+  text-align: center;
+}
+
+.schedulingTableHour
+{
+  width: 100%;
+  border-collapse: collapse;  
+  border: 0;
+}
+
+.schedulingTableHour td
+{
+  border: 0;
+  height: 30px;
+}
+
+.dayCell
+{
+  background-color: rgb(235,235,235); 
+}
+
+.dayCellNotAvail
+{
+  background-color: rgb(230,218,218); 
+  color: rgb(206,182,182); 
+}
+
+.dayCellValid
+{
+
+}
+
+.dayCellValid a
+{
+  display: block;
+  color: rgb(0,0,0);
+  text-decoration: none;
+  height: 100%;
+}
+
+.dayCellValid a:hover
+{
+  background: rgb(182, 215, 149);
+}
+
+.dayCellInvalid
+{
+  color: rgb(200,200,200); 
+}
+
+.dayCellDayPassed
+{
+  background-color: rgb(225,219,233);
+  color: rgb(200,188,214);   
+}
+
+
+.dayInfoCell
+{
+  height: 120px;
+}
+
+.dayInfoCellNotAvail
+{
+  vertical-align: top;
+  background-color: rgb(218,200,200); 
+}
+
+.dayInfoCellInvalid
+{
+  background-color: rgb(200,200,200); 
+}
+
+.dayInfoCellDayPassed
+{
+  background-color: rgb(208,198,220); 
+}
+
+.timeInvalid
+{
+  color: rgb(175,175,175); 
+  background-color: rgb(200,200,200);   
+}
+
+
+.tutDefTimeTable
+{
+  border: 1px solid rgb(100,100,100);
+}
+
+.tutDefTimeTable td
+{ 
+  border: 1px solid rgb(100,100,100);  
+}
+
+/********************** User Account page **********************/
+
+.tabs
+{
+}
+
+.tabs ul 
+{
+	list-style: none;
+	padding-left: 0;
+	padding-bottom: 7px;
+	margin: 0;
+}
+    
+.tabs li {
+	float: left;
+	border: 1px solid rgb(0,0,0);
+	font-size: 21px;
+	border-bottom-width: 0;
+	margin: 0;
+}
+    
+.tabs a {
+	text-decoration: none;
+	display: block;
+	background: rgb(240,240,240);
+	color: rgb(0,0,0);
+	padding: 0.15em 0.7em;
+	width: 11em;
+	text-align: center;
+}
+	
+.tabs a:hover {
+	background: rgb(220,220,220);
+}
+	
+.tabs #selected {
+	border-color: black;
+}
+	
+.tabs #selected a {
+	position: relative;
+	background: rgb(182, 215, 149);
+	color: black;
+	font-weight: bold;
+}
+
+.tabContainer
+{
+  position: relative;
+	border: 1px solid black;
+	width: auto;
+	padding: 30px 50px 50px 50px;
+}
+
+/********************** Private Messages **********************/ 
+
+#PMFolders
+{
+  float: left;
+  min-width: 10% 
+}
+
+#ViewPrivMsgListDiv
+{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#PMTable
+{
+  width:100%;
+  border-collapse:collapse;
+  font-size: 14px;
+}
+  
+#PMTable td, #PMTable th 
+{
+  border:1px solid #000000;
+}
+  
+#PMTable th 
+{
+  background-color: rgb(220,220,220);
+  color:#000000;
+}
+
+#PMTable td 
+{
+  color:#000000;
+  padding: 3px;
+}
+
+.newMessage
+{
+  font-family: MV Boli; 
+  color: rgb(0,102,0);  
+}
+
+.msgUseage
+{
+  font-size: 12px;  
+}
+
+.pmHeader
+{
+  font-size: 14px;
+  color: rgb(0,0,0);
+}
+
+.messageClass
+{
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;    
+    padding-right: 5px;    
+    color: Black;
+    font-size: 14px;
+    border: 1px;
+    border-style: solid; 
+    border-color: rgb(190,219,161); 
+    background-color: rgb(234,243,225);
+    word-wrap: break-word;     
+}
+
+
+/********************** Button **********************/
+
+.buttonRound {
+  background-color: rgb(134,188, 80);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(174,210,138)), color-stop(50%, rgb(134,188, 80)), color-stop(50%, rgb(121,175,67)), color-stop(100%, rgb(130,186,74)));
+  background-image: -webkit-linear-gradient(top, rgb(174,210,138) 0%, rgb(134,188, 80) 50%, rgb(121,175,67) 50%, rgb(130,186,74) 100%);
+  background-image: -moz-linear-gradient(top, rgb(174,210,138) 0%, rgb(134,188, 80) 50%, rgb(121,175,67) 50%, rgb(130,186,74) 100%);
+  background-image: -ms-linear-gradient(top, rgb(174,210,138) 0%, rgb(134,188, 80) 50%, rgb(121,175,67) 50%, rgb(130,186,74) 100%);
+  background-image: -o-linear-gradient(top, rgb(174,210,138) 0%, rgb(134,188, 80) 50%, rgb(121,175,67) 50%, rgb(130,186,74) 100%);
+  background-image: linear-gradient(top, rgb(174,210,138) 0%, rgb(134,188, 80) 50%, rgb(121,175,67) 50%, rgb(130,186,74) 100%);
+	-webkit-box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2); 
+	border:1px solid rgb(134, 188, 80);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+	text-indent:0;	
+	display:inline-block;
+	color:rgb(255,255,255);
+	font-size:20px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	padding-left: 20px;
+	padding-right: 20px;	
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px rgb(38,55,21);
+}
+.buttonRound:hover {
+  cursor: pointer; 
+  background-color: rgb(159,202,116);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(199,224,174)), color-stop(50%, rgb(159,202,116)), color-stop(50%, rgb(146,195,97)), color-stop(100%, rgb(155,200,110)));
+  background-image: -webkit-linear-gradient(top, rgb(199,224,174) 0%, rgb(159,202,116) 50%, rgb(146,195,97) 50%, rgb(155,200,110) 100%);
+  background-image: -moz-linear-gradient(top, rgb(199,224,174) 0%, rgb(159,202,116) 50%, rgb(146,195,97) 50%, rgb(155,200,110) 100%);
+  background-image: -ms-linear-gradient(top, rgb(199,224,174) 0%, rgb(159,202,116) 50%, rgb(146,195,97) 50%, rgb(155,200,110) 100%);
+  background-image: -o-linear-gradient(top, rgb(199,224,174) 0%, rgb(159,202,116) 50%, rgb(146,195,97) 50%, rgb(155,200,110) 100%);
+  background-image: linear-gradient(top, rgb(199,224,174) 0%, rgb(159,202,116) 50%, rgb(146,195,97) 50%, rgb(155,200,110) 100%);  
+}
+
+
+.buttonRound:disabled {
+  opacity: 0.65; 
+  cursor: not-allowed;
+}
+
+
+button.btnGreenLarge2D 
+{
+  background-color: rgb(134, 188, 80);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 15px;
+  color: rgb(255,255,255);  
+  padding: 0.50em 0.6em;
+  border: none;
+  transition: all 1.0s ease-out;
+}
+
+button.btnGreenLarge2D:hover
+{
+  background-color:  rgb(36, 44, 66);
+  transition: all 1.0s ease-in;
+  border-radius:40px;  
+  cursor: pointer; 
+} 
+
+button.btnGreenLarge2DFont
+{
+  font-size: 32px; 
+  font-size: 1.9vw;  
+}
+
+button.btnUserInfo
+{
+  background-color: rgb(174, 210, 138);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(209, 230, 188)), color-stop(50%, rgb(174, 210, 138)), color-stop(50%, rgb(153, 199, 107)), color-stop(100%, rgb(163, 204, 122)));
+  background-image: -webkit-linear-gradient(top, rgb(209, 230, 188) 0%, rgb(174, 210, 138) 50%, rgb(153, 199, 107) 50%, rgb(163, 204, 122) 100%);
+  background-image: -moz-linear-gradient(top, rgb(209, 230, 188) 0%, rgb(174, 210, 138) 50%, rgb(153, 199, 107) 50%, rgb(163, 204, 122) 100%);
+  background-image: -ms-linear-gradient(top, rgb(209, 230, 188) 0%, rgb(174, 210, 138) 50%, rgb(153, 199, 107) 50%, rgb(163, 204, 122) 100%);
+  background-image: -o-linear-gradient(top, rgb(209, 230, 188) 0%, rgb(174, 210, 138) 50%, rgb(153, 199, 107) 50%, rgb(163, 204, 122) 100%);
+  background-image: linear-gradient(top, rgb(209, 230, 188) 0%, rgb(174, 210, 138) 50%, rgb(153, 199, 107) 50%, rgb(163, 204, 122) 100%);
+  border: 1px solid rgb(100, 100, 100);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(255,255,255, 0.8);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(255,255,255, 0.8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2); 
+  color: rgb(0,0,0);
+  padding:7px 15px;
+  font-size:15px;
+  /*font-weight: bold;*/
+} 
+
+button.btnUserInfo:hover
+{
+  cursor: pointer; 
+  background-color: rgb(201,225,177);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(234,243,225)), color-stop(50%, rgb(201,225,177)), color-stop(50%, rgb(180,214,146)), color-stop(100%, rgb(190,219,161)));
+  background-image: -webkit-linear-gradient(top, rgb(234,243,225) 0%, rgb(201,225,177) 50%, rgb(180,214,146) 50%, rgb(190,219,161) 100%);
+  background-image: -moz-linear-gradient(top, rgb(234,243,225) 0%, rgb(201,225,177) 50%, rgb(180,214,146) 50%, rgb(190,219,161) 100%);
+  background-image: -ms-linear-gradient(top, rgb(234,243,225) 0%, rgb(201,225,177) 50%, rgb(180,214,146) 50%, rgb(190,219,161) 100%);
+  background-image: -o-linear-gradient(top, rgb(234,243,225) 0%, rgb(201,225,177) 50%, rgb(180,214,146) 50%, rgb(190,219,161) 100%);
+  background-image: linear-gradient(top, rgb(234,243,225) 0%, rgb(201,225,177) 50%, rgb(180,214,146) 50%, rgb(190,219,161) 100%);  
+}
+
+
+button.btnYellow
+{
+  background-color: rgb(235,231,75);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(238,235,100)), color-stop(50%, rgb(235,231,75)), color-stop(50%, rgb(221,216,25)), color-stop(100%, rgb(230,225,34)));
+  background-image: -webkit-linear-gradient(top, rgb(238,235,100) 0%, rgb(235,231,75) 50%, rgb(221,216,25) 50%, rgb(230,225,34) 100%);
+  background-image: -moz-linear-gradient(top, rgb(238,235,100) 0%, rgb(235,231,75) 50%, rgb(221,216,25) 50%, rgb(230,225,34) 100%);
+  background-image: -ms-linear-gradient(top, rgb(238,235,100) 0%, rgb(235,231,75) 50%, rgb(221,216,25) 50%, rgb(230,225,34) 100%);
+  background-image: -o-linear-gradient(top, rgb(238,235,100) 0%, rgb(235,231,75) 50%, rgb(221,216,25) 50%, rgb(230,225,34) 100%);
+  background-image: linear-gradient(top, rgb(238,235,100) 0%, rgb(235,231,75) 50%, rgb(221,216,25) 50%, rgb(230,225,34) 100%);
+  border: 1px solid rgb(100, 100, 100);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(255,255,255, 0.8);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(255,255,255, 0.8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2); 
+  color: rgb(0,0,0);
+  padding:7px 15px;
+  font-size:15px;
+  /*font-weight: bold;*/
+} 
+
+button.btnYellow:hover
+{
+  cursor: pointer; 
+  background-color: rgb(244,242,154);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(255,249,206)), color-stop(50%, rgb(244,242,154)), color-stop(50%, rgb(230,225,30)), color-stop(100%, rgb(240,237,116)));
+  background-image: -webkit-linear-gradient(top, rgb(255,249,206) 0%, rgb(244,242,154) 50%, rgb(230,225,30) 50%, rgb(240,237,116) 100%);
+  background-image: -moz-linear-gradient(top, rgb(255,249,206) 0%, rgb(244,242,154) 50%, rgb(230,225,30) 50%, rgb(240,237,116) 100%);
+  background-image: -ms-linear-gradient(top, rgb(255,249,206) 0%, rgb(244,242,154) 50%, rgb(230,225,30) 50%, rgb(240,237,116) 100%);
+  background-image: -o-linear-gradient(top, rgb(255,249,206) 0%, rgb(244,242,154) 50%, rgb(230,225,30) 50%, rgb(240,237,116) 100%);
+  background-image: linear-gradient(top, rgb(255,249,206) 0%, rgb(244,242,154) 50%, rgb(230,225,30) 50%, rgb(240,237,116) 100%);  
+}
+
+
+
+button.btnCalendar {
+  background: #fff;
+  background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #fff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 23px;
+  padding: 4px 18px 4px 18px;
+  border: solid rgb(150,150,150) 1px;
+  text-decoration: none;
+}
+
+button.btnCalendar:hover 
+{
+  cursor: pointer; 
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #c8c8c8);
+  background-image: -moz-linear-gradient(top, #ffffff, #c8c8c8);
+  background-image: -ms-linear-gradient(top, #ffffff, #c8c8c8);
+  background-image: -o-linear-gradient(top, #ffffff, #c8c8c8);
+  background-image: linear-gradient(to bottom, #ffffff, #c8c8c8);
+  text-decoration: none;
+}
+
+button.btnCalendar:disabled
+{
+  background: #fff;
+  background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #fff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: rgb(220,220,220);
+  font-size: 23px;
+  padding: 4px 18px 4px 18px;
+  border: solid rgb(207,207,207) 1px;
+  text-decoration: none;
+}
+
+
+/********************** Classes for low resolution **********************/
+
+
+@media only screen and (max-width: 1280px) 
+{
+  
+  .headerOverImageOutline 
+  { 
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;  
+  }
+    
+    
+  .imageBorder
+  {
+   padding:8px; 
+   border:solid; 
+   border-color: rgb(221,221,221) rgb(221,221,221) rgb(221,221,221) rgb(221,221,221); 
+   border-width: 1px 1px 1px 1px;  
+   box-shadow: 6px 6px 4px rgb(175,175,175);
+  }
+  
+  .tableQuotes
+  {
+    width: 80%;
+  }
+
+  .divTimeZone
+  {
+    width: 90%;
+  }
+  
+}
+
+
+@media only screen and (max-width: 950px) 
+{
+  
+  /* IPhone 4 and 4s resolution are 960 in width so we don't want to affect Iphone 4 and 4s*/ 
+  .textAndButtonDiv 
+  {
+    position: relative;
+    margin-top: 5%;
+    float: left;
+    left: 55%; 
+  }
+}
+
+
+@media only screen and (min-width: 3440px) 
+{
+  /* make the hero image title font smaller if the resolution width is at least 3440px */
+  .headerOverImageFont { 
+    font-size: 35px; 
+    font-size: 1.8vw;
+  }
+
+
+  /* make the hero image title font smaller if the resolution width is at least 3440px */
+  .headerOverImageSubFont { 
+    font-size: 24px; 
+    font-size: 1.1vw;
+  }
+  
+  /* make the hero image button font smaller if the resolution width is at least 3440px */  
+  button.btnGreenLarge2DFont
+  {
+    font-size: 32px; 
+    font-size: 1.3vw;  
+  }  
+}
